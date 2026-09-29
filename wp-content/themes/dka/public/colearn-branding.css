@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: Roobert;
   src: url("./subset-Roobert-Medium-ab9db677.woff2?v=20260930c") format("woff2");
   font-weight: 400;
@@ -94,41 +94,210 @@ body.colearn .banner .nav-primary > ul > li > a {
   white-space: nowrap;
 }
 
-body.academy .hero-with-outline h1 {
-  color: var(--black);
+/* Global Hero & Subheading text visibility fix:
+   Ensure all headings, subheadings, paragraphs, links, and lines in hero sections
+   are dark and readable on light/stone backgrounds */
+.hero-with-outline :is(h1, h2, h3, p, a),
+.hero-with-outline .heading-container :is(h1, h2, h3),
+.hero-with-outline .subheading-container :is(h1, h2, h3, p),
+.hero-with-outline .sub-heading-container :is(h1, h2, h3, p, a),
+.hero-with-outline .text-reveal,
+.case-studies-hero :is(h1, h2, h3, p, a),
+.case-studies-hero .heading-container :is(h1, h2),
+.case-studies-hero .text-reveal,
+body.page-template-template-sector .subheading-container h2,
+body.page-template-template-sectors .subheading-container h2,
+body.page-template-template-work .case-studies-hero h1,
+body.page-template-template-work .case-studies-hero p,
+body.academy .hero-with-outline :is(h1, h2, h3, p, a),
+body.courses .hero-with-outline :is(h1, h2, h3, p, a),
+body.courses .hero-with-outline .subheading-container h2,
+body.work .case-studies-hero :is(h1, h2, p, a),
+body.career-directory .case-studies-hero :is(h1, h2, p, a),
+body.simulations .hero-with-outline :is(h1, h2, h3, p, a),
+body.lectures .case-studies-hero :is(h1, h2, p, a),
+body.learner .case-studies-hero :is(h1, h2, p, a),
+body.learner .hero-with-outline :is(h1, h2, p, a) {
+  color: var(--black) !important;
 }
 
+.hero-with-outline .sub-heading-container a,
+.hero-with-outline .subheading-container a {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.hero-with-outline .sub-heading-container a:hover,
+.hero-with-outline .subheading-container a:hover {
+  color: var(--black) !important;
+  background-color: var(--acid);
+}
+
+p.in-this-section,
+.hero-with-outline p.in-this-section {
+  color: var(--black) !important;
+}
+
+p.in-this-section a,
+.hero-with-outline p.in-this-section a {
+  color: var(--black) !important;
+  border-right: 1px solid var(--black) !important;
+}
+
+p.in-this-section a:last-child,
+.hero-with-outline p.in-this-section a:last-child {
+  border-right: none !important;
+}
+
+/* Ensure Academy courses portal is fully visible and styled */
 body.courses #colearn-portal {
-  display: none !important;
+  display: block !important;
 }
 
-body.career-directory .career-search {
+/* Career directory & filtering styling */
+.career-directory .career-search,
+.career-search {
   width: min(100%, 30rem);
-  min-height: 3rem;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--black);
-  border-radius: 0;
-  background: transparent;
+  min-height: 3.125rem;
+  padding: 0.65rem 1.25rem;
+  border: 1.5px solid var(--black);
+  border-radius: 2rem;
+  background: #fff;
   color: var(--black);
-  font: inherit;
+  font-family: var(--roobert);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-body.career-directory .career-filters {
+.career-directory .career-search:focus,
+.career-search:focus {
+  outline: none;
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(207, 255, 3, 0.7);
+}
+
+.career-directory .career-filters,
+.career-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
 }
 
-body.career-directory .career-filter[aria-pressed="true"] {
-  background: var(--acid);
+.career-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border: 1.5px solid var(--black);
+  border-radius: 2.0625rem;
+  background: transparent;
   color: var(--black);
+  font-family: var(--roobert);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-body.career-directory .career-empty {
+.career-filter:hover {
+  background-color: var(--black);
+  color: #fff;
+}
+
+.career-filter[aria-pressed="true"],
+body.career-directory .career-filter[aria-pressed="true"] {
+  background: var(--acid) !important;
+  color: var(--black) !important;
+  font-weight: 600;
+}
+
+.career-filter[aria-pressed="true"]:hover {
+  background: var(--black) !important;
+  color: var(--acid) !important;
+}
+
+.career-empty {
   grid-column: 1 / -1;
-  padding: 2rem 0;
-  border-top: 1px solid var(--black);
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  border-top: 1.5px solid var(--black);
+}
+
+/* YouTube Video Cards Polish */
+.colearn-video-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+  border-radius: 0.75rem;
+  border: 1.5px solid var(--black);
+  margin-bottom: 1.25rem;
+}
+
+.colearn-video-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.colearn-video-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+.colearn-play-button {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  background: var(--acid);
+  color: var(--black);
+  border: 1.5px solid var(--black);
+  border-radius: 2rem;
+  font-family: var(--roobert);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 2;
+}
+
+.colearn-play-button svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.colearn-video-thumbnail:hover .colearn-play-button {
+  transform: scale(1.06);
+}
+
+.colearn-video-duration {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  border-radius: 4px;
+  font-family: var(--roobert);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -147,4 +316,1270 @@ body.career-directory .career-empty {
     min-width: 0;
     max-width: 100%;
   }
+}
+
+/* ==========================================================================
+   CoLearn AI Chatbot (Bottom-Left Floating Widget)
+   ========================================================================== */
+.colearn-chat-trigger {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--acid, #cfff03);
+  color: var(--black, #000);
+  border: 2px solid var(--black, #000);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  outline: none;
+}
+
+.colearn-chat-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.colearn-chat-trigger .colearn-chat-close-icon {
+  display: none;
+}
+
+.colearn-chat-trigger.is-active .colearn-chat-icon {
+  display: none;
+}
+
+.colearn-chat-trigger.is-active .colearn-chat-close-icon {
+  display: block;
+}
+
+.colearn-chat-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--acid, #cfff03);
+  opacity: 0.6;
+  animation: colearn-chat-pulse-anim 2.5s infinite;
+  pointer-events: none;
+}
+
+.colearn-chat-trigger.is-active .colearn-chat-pulse {
+  display: none;
+}
+
+@keyframes colearn-chat-pulse-anim {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  70% { transform: scale(1.25); opacity: 0; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+.colearn-chatbot {
+  position: fixed;
+  bottom: 96px;
+  left: 24px;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  height: 530px;
+  max-height: calc(100vh - 120px);
+  background: #ffffff;
+  border: 2px solid var(--black, #000);
+  border-radius: 18px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px) scale(0.96);
+  transform-origin: bottom left;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--roobert), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.colearn-chatbot.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.colearn-chat-header {
+  background: var(--black, #000);
+  color: #ffffff;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.colearn-chat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--acid, #cfff03);
+  color: var(--black, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.colearn-chat-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.colearn-chat-header-info h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.colearn-chat-status {
+  margin: 2px 0 0;
+  font-size: 0.76rem;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colearn-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+.colearn-chat-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colearn-chat-actions button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.colearn-chat-actions button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.colearn-chat-key-drawer {
+  background: #f4f2ee;
+  border-bottom: 1.5px solid var(--black, #000);
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  color: #222;
+  flex-shrink: 0;
+}
+
+.colearn-chat-key-drawer label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.colearn-key-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.colearn-key-input-row input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.colearn-key-input-row button {
+  padding: 6px 12px;
+  background: var(--black, #000);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.colearn-chat-key-drawer small {
+  color: #666;
+  font-size: 0.72rem;
+}
+
+.colearn-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #faf8f5;
+  scroll-behavior: smooth;
+}
+
+.colearn-chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 86%;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.colearn-chat-msg.bot {
+  align-self: flex-start;
+}
+
+.colearn-chat-msg.user {
+  align-self: flex-end;
+}
+
+.colearn-chat-bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+
+.colearn-chat-msg.bot .colearn-chat-bubble {
+  background: #ffffff;
+  border: 1.5px solid #dedbd4;
+  color: var(--black, #000);
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.colearn-chat-msg.bot .colearn-chat-bubble a {
+  color: var(--black, #000);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--acid, #cfff03);
+  text-decoration-thickness: 3px;
+}
+
+.colearn-chat-msg.user .colearn-chat-bubble {
+  background: var(--black, #000);
+  color: #ffffff;
+  border-bottom-right-radius: 3px;
+}
+
+.colearn-chat-time {
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 4px;
+  padding: 0 2px;
+}
+
+.colearn-chat-msg.user .colearn-chat-time {
+  align-self: flex-end;
+}
+
+.colearn-chat-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1.5px solid #dedbd4;
+  border-radius: 14px;
+  border-bottom-left-radius: 3px;
+  width: fit-content;
+}
+
+.colearn-chat-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #888;
+  animation: colearn-typing-dot 1.2s infinite ease-in-out;
+}
+
+.colearn-chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.colearn-chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes colearn-typing-dot {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.1); opacity: 1; }
+}
+
+.colearn-chat-chips {
+  padding: 8px 14px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  background: #faf8f5;
+  border-top: 1px solid #eae7e1;
+  flex-shrink: 0;
+  scrollbar-width: none;
+}
+
+.colearn-chat-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.colearn-chat-chip {
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--black, #000);
+  padding: 5px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s, transform 0.15s;
+}
+
+.colearn-chat-chip:hover {
+  background: var(--acid, #cfff03);
+  transform: translateY(-1px);
+}
+
+.colearn-chat-input-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border-top: 1.5px solid var(--black, #000);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.colearn-chat-input-bar input {
+  flex: 1;
+  border: 1.5px solid #d3c3ac;
+  border-radius: 24px;
+  padding: 9px 15px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  background: #faf9f7;
+  color: var(--black, #000);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.colearn-chat-input-bar input:focus {
+  border-color: var(--black, #000);
+  background: #ffffff;
+}
+
+.colearn-chat-input-bar button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--acid, #cfff03);
+  color: var(--black, #000);
+  border: 1.5px solid var(--black, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.colearn-chat-input-bar button:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   CoLearn Learner Support & Advisory Styling
+   ========================================================================== */
+.colearn-support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .colearn-support-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.colearn-support-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.colearn-support-card {
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.colearn-support-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--black, #000);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.colearn-support-card p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.colearn-support-card a {
+  color: var(--black, #000);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--acid, #cfff03);
+  text-decoration-thickness: 3px;
+}
+
+.colearn-support-form-wrap {
+  background: #ffffff;
+  border: 2px solid var(--black, #000);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.colearn-support-form-wrap h2 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  color: var(--black, #000);
+}
+
+.colearn-support-form-wrap p.form-desc {
+  margin: 0 0 1.75rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.colearn-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .colearn-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colearn-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.colearn-field label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--black, #000);
+}
+
+.colearn-field input,
+.colearn-field select,
+.colearn-field textarea {
+  border: 1.5px solid #d3c3ac;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #faf9f7;
+  color: #000;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.colearn-field input:focus,
+.colearn-field select:focus,
+.colearn-field textarea:focus {
+  border-color: var(--black, #000);
+  background: #ffffff;
+}
+
+.colearn-support-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--acid, #cfff03);
+  color: var(--black, #000);
+  border: 2px solid var(--black, #000);
+  border-radius: 2rem;
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.colearn-support-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.colearn-support-success {
+  background: #f0fdf4;
+  border: 2px solid #16a34a;
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+  color: #166534;
+}
+
+.colearn-support-success h3 {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.colearn-support-success p {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.colearn-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.colearn-faq-card {
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.colearn-faq-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black, #000);
+  margin: 0 0 0.6rem;
+}
+
+.colearn-faq-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #444;
+  margin: 0;
+}
+
+/* ==========================================================================
+   CoLearn Career Pathways, Wage Guide & Pathway Steps
+   ========================================================================== */
+.colearn-section-wrap {
+  padding: 4.5rem 0;
+  border-top: 1.5px solid var(--black, #000);
+}
+
+.colearn-section-wrap[data-bg="stone"] {
+  background-color: var(--stone, #f7f5f2);
+}
+
+.colearn-section-wrap[data-bg="putty"] {
+  background-color: var(--putty, #d3c3ac);
+}
+
+.colearn-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.colearn-section-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--black, #000);
+  margin: 0 0 0.75rem;
+}
+
+.colearn-section-header p {
+  font-size: 1.15rem;
+  color: #333;
+  max-width: 50rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.colearn-wage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.colearn-wage-card {
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.colearn-wage-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.colearn-wage-sector {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.colearn-wage-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black, #000);
+  margin: 0 0 1.25rem;
+}
+
+.colearn-wage-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.colearn-wage-tier {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #dedbd4;
+}
+
+.colearn-wage-tier-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.colearn-wage-tier-val {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--black, #000);
+}
+
+.colearn-wage-tier.featured .colearn-wage-tier-val {
+  color: #15803d;
+  background: #dcfce7;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.colearn-wage-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.colearn-wage-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #eeebe6;
+  color: #222;
+}
+
+.colearn-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.colearn-step-card {
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  padding: 1.75rem;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.colearn-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--acid, #cfff03);
+  border: 1.5px solid var(--black, #000);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--black, #000);
+  margin-bottom: 1rem;
+}
+
+.colearn-step-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--black, #000);
+  margin: 0 0 0.6rem;
+}
+
+.colearn-step-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+  margin: 0;
+}
+
+
+
+/* ==========================================================================
+   Career Directory & Layout Fixes (Fixes 12-column grid squishing)
+   ========================================================================== */
+.case-studies-hero {
+  height: auto !important;
+  max-height: none !important;
+  padding: 7.5rem 0 2rem !important;
+}
+
+.case-studies-hero .container {
+  display: block !important;
+}
+
+.case-studies-hero .heading-container {
+  display: block !important;
+  grid-column: span 12 !important;
+  margin-top: 0 !important;
+}
+
+.case-studies-hero h1 {
+  opacity: 1 !important;
+  color: var(--black, #000) !important;
+  margin: 0 0 1rem !important;
+}
+
+.case-studies-hero .subheading-container {
+  display: block !important;
+  grid-column: span 12 !important;
+  max-width: 52rem !important;
+}
+
+.case-studies-hero .subheading-container p {
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+}
+
+.career-directory .filters .container,
+.filters .container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  align-items: flex-start !important;
+}
+
+.career-directory .filters .heading,
+.filters .heading {
+  grid-column: span 12 !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  color: var(--black, #000) !important;
+}
+
+.career-directory .career-search,
+.career-search {
+  width: 100% !important;
+  max-width: 480px !important;
+  min-height: 3.125rem !important;
+  padding: 0.65rem 1.25rem !important;
+  border: 1.5px solid var(--black) !important;
+  border-radius: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.career-directory .career-filters,
+.career-filters {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.75rem !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.career-filter {
+  white-space: nowrap !important;
+}
+
+.colearn-section-wrap .container {
+  display: block !important;
+}
+
+.colearn-section-header {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.colearn-wage-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+
+.colearn-steps-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+
+.colearn-faq-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+/* ==========================================================================
+   Courses Section Layout & Enrichment (Fixes 8-column squishing)
+   ========================================================================== */
+.info-panel.colearn-portal .container,
+.colearn-portal .container,
+.info-panel.colearn-lectures .container,
+.colearn-lectures .container,
+.info-panel.colearn-active-simulation .container,
+.colearn-active-simulation .container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(1.25rem, 4vw, 3.5rem) !important;
+  padding-right: clamp(1.25rem, 4vw, 3.5rem) !important;
+}
+
+.colearn-portal .heading,
+.colearn-lectures .heading,
+.colearn-active-simulation .heading {
+  display: block !important;
+  width: 100% !important;
+  grid-column: span 12 !important;
+  margin-bottom: 2.25rem !important;
+}
+
+.colearn-portal .text,
+.colearn-lectures .text,
+.colearn-active-simulation .text {
+  display: block !important;
+  width: 100% !important;
+  grid-column: span 12 !important;
+}
+
+.colearn-portal .colearn-course-grid,
+.colearn-lectures .colearn-course-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 1.75rem !important;
+  width: 100% !important;
+}
+
+.colearn-portal .colearn-course,
+.colearn-lectures .colearn-course {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 1.85rem !important;
+  background: #ffffff !important;
+  border: 1.5px solid var(--black, #000) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.colearn-portal .colearn-course:hover,
+.colearn-lectures .colearn-course:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08) !important;
+}
+
+.colearn-portal .colearn-course h4,
+.colearn-lectures .colearn-course h4 {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin: 0.6rem 0 0.75rem !important;
+  color: var(--black, #000) !important;
+}
+
+.colearn-portal .colearn-course p,
+.colearn-lectures .colearn-course p {
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+  color: #333333 !important;
+}
+
+.colearn-portal .colearn-learning-layout {
+  display: grid !important;
+  grid-template-columns: minmax(280px, 380px) minmax(0, 1fr) !important;
+  gap: 2.25rem !important;
+  align-items: start !important;
+}
+
+@media (max-width: 920px) {
+  .colearn-portal .colearn-learning-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.colearn-portal .colearn-overview {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 1.25rem !important;
+  padding: 2rem 0 !important;
+  border-bottom: 1.5px solid var(--black, #000) !important;
+}
+
+/* ==========================================================================
+   Vocational Accreditation & Matrix Styles
+   ========================================================================== */
+.colearn-matrix-wrap {
+  width: 100%;
+  margin-top: 2rem;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.colearn-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.colearn-matrix-table th {
+  background: #f0eee9;
+  font-weight: 700;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 2px solid var(--black, #000);
+  color: var(--black, #000);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.colearn-matrix-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid #e5e2dc;
+  color: #222;
+  vertical-align: middle;
+}
+
+.colearn-matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.colearn-matrix-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #e5f7ed;
+  color: #0b6b2b;
+  border: 1px solid #a3e0be;
+}
+
+.colearn-matrix-badge.level3 {
+  background: #eef2ff;
+  color: #3730a3;
+  border-color: #c7d2fe;
+}
+
+/* ==========================================================================
+   Simulations Page & Simulation Videos Styling
+   ========================================================================== */
+.colearn-simulation-list {
+  background-color: var(--putty, #d3c3ac) !important;
+  padding: 4rem 0 !important;
+}
+
+.colearn-simulation-list .sectors-block {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem) !important;
+  box-sizing: border-box !important;
+}
+
+.colearn-simulation-list .sector-row {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr) !important;
+  gap: 2.75rem !important;
+  align-items: center !important;
+  padding: 3.5rem 0 !important;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.colearn-simulation-list .sector-row:last-child {
+  border-bottom: none !important;
+}
+
+.colearn-simulation-list .sector-row .image {
+  grid-column: 1 / span 5 !important;
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: 16 / 10 !important;
+  border-radius: 14px !important;
+  border: 1.5px solid var(--black, #000) !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  background: #000 !important;
+}
+
+.colearn-simulation-list .sector-row .image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.colearn-simulation-list .sector-row:hover .image img {
+  transform: scale(1.04) !important;
+}
+
+.colearn-simulation-list .sector-row .text {
+  grid-column: 6 / span 7 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.colearn-simulation-list .sector-row:nth-child(even) .image {
+  grid-column: 8 / span 5 !important;
+  grid-row: 1 !important;
+}
+
+.colearn-simulation-list .sector-row:nth-child(even) .text {
+  grid-column: 1 / span 7 !important;
+  grid-row: 1 !important;
+}
+
+@media (max-width: 850px) {
+  .colearn-simulation-list .sector-row,
+  .colearn-simulation-list .sector-row:nth-child(even) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .colearn-simulation-list .sector-row .image,
+  .colearn-simulation-list .sector-row:nth-child(even) .image {
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  .colearn-simulation-list .sector-row .text,
+  .colearn-simulation-list .sector-row:nth-child(even) .text {
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+.colearn-sim-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.colearn-sim-spec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--black, #000);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--black, #000);
+}
+
+.colearn-sim-spec-tag svg {
+  width: 14px;
+  height: 14px;
+  color: #333;
+}
+
+/* Simulation Videos Section */
+.colearn-sim-videos-section {
+  padding: 5rem 0;
+  background-color: var(--stone, #f7f5f2);
+  border-top: 1.5px solid var(--black, #000);
+  border-bottom: 1.5px solid var(--black, #000);
+}
+
+.colearn-sim-videos-section .container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding-left: clamp(1.25rem, 4vw, 3.5rem) !important;
+  padding-right: clamp(1.25rem, 4vw, 3.5rem) !important;
+}
+
+.colearn-sim-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.colearn-sim-video-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1.5px solid var(--black, #000);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.colearn-sim-video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.colearn-sim-video-card .colearn-video-thumbnail {
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  position: relative;
+  background: #000;
+  border: 1.5px solid var(--black, #000);
+}
+
+.colearn-sim-video-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0.6rem 0 0.6rem;
+  color: var(--black, #000);
+  line-height: 1.3;
+}
+
+.colearn-sim-video-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+  margin: 0 0 1.25rem;
+}
+
+.colearn-sim-video-card .colearn-course-meta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.colearn-sim-video-card .colearn-video-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #ebe8e2;
+}
+
+.colearn-sim-video-card .colearn-video-footer a.button {
+  margin: 0;
+}
+
+/* Simulation Active Frame Viewer */
+.colearn-active-simulation {
+  padding: 5rem 0 !important;
+}
+
+.colearn-simulation-frame-wrap {
+  width: 100% !important;
+  min-height: 560px !important;
+  border-radius: 14px !important;
+  border: 2px solid var(--black, #000) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+  overflow: hidden !important;
+  background: #000 !important;
+  margin-top: 1.5rem !important;
+}
+
+.colearn-simulation-frame-wrap iframe {
+  width: 100% !important;
+  height: 560px !important;
+  border: none !important;
+  display: block !important;
+}
+
+/* Video Lecture Filters */
+.colearn-lecture-filters {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.75rem !important;
+  margin-bottom: 2.25rem !important;
+}
+
+.colearn-lecture-filters .button[aria-pressed="true"] {
+  background-color: var(--acid, #cfff03) !important;
+  color: var(--black, #000) !important;
+  font-weight: 700 !important;
+  border-color: var(--black, #000) !important;
 }

@@ -1,15 +1,15 @@
 (() => {
   const simulations = {
     dam: {
-      title: "Hydroelectric power",
+      title: "Hydroelectric power plant",
       source: "/Dam/Dam%20Simulation/mm/neue-energien/wasserkraft/index.html",
     },
     solar: {
-      title: "Solar thermal",
+      title: "Solar thermal circulation",
       source: "/Solar/Solar%20Panel/mm/neue-energien/solarthermie/index.html",
     },
     wind: {
-      title: "Wind power",
+      title: "Wind power generation",
       source: "/Wind%20Power/Wind%20Power/mm/neue-energien/windkraft/index.html",
     },
   };
@@ -18,25 +18,54 @@
   const title = document.querySelector("#simulation-view-title");
   const instructions = document.querySelector("#simulation-instructions");
 
-  function launch(name) {
+  function setEmbeddedSimulation(name) {
     const simulation = simulations[name];
     if (!simulation) return;
-    frame.src = simulation.source;
-    frame.title = `${simulation.title} interactive simulation`;
-    title.textContent = simulation.title;
-    instructions.textContent = "Simulation controls are provided by the original learning activity. Use the full-screen control for an expanded view.";
+
+    if (frame) {
+      frame.src = simulation.source;
+      frame.title = `${simulation.title} interactive simulation`;
+    }
+    if (title) title.textContent = `${simulation.title} (Live Lab)`;
+    if (instructions) {
+      instructions.innerHTML = `Loaded <strong>${simulation.title}</strong> in the interactive canvas. <a href="${simulation.source}" target="_blank" rel="noopener" style="text-decoration:underline; font-weight:700; margin-left:0.5rem; color:var(--black);">Open full window in new tab ↗</a>`;
+    }
     document.querySelectorAll("[data-simulation]").forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.simulation === name));
     });
   }
 
-  document.querySelectorAll("[data-simulation]").forEach((button) => {
-    button.addEventListener("click", () => launch(button.dataset.simulation));
-  });
+  function launchInTab(name) {
+    const simulation = simulations[name];
+    if (!simulation) return;
+    
+    // Open in a new tab immediately
+    window.open(simulation.source, "_blank", "noopener,noreferrer");
+    setEmbeddedSimulation(name);
+  }
+
+  // Bind launch buttons
   document.querySelectorAll("[data-launch-simulation]").forEach((button) => {
-    button.addEventListener("click", () => {
-      launch(button.dataset.launchSimulation);
-      document.querySelector(".colearn-active-simulation").scrollIntoView({ behavior: "smooth" });
+    button.addEventListener("click", (e) => {
+      const name = button.dataset.launchSimulation;
+      if (name) {
+        launchInTab(name);
+      }
+    });
+  });
+
+  // Bind embedded tab switchers
+  document.querySelectorAll("[data-simulation]").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const name = button.dataset.simulation;
+      if (name) {
+        // If it's an explicit launch button or has target="_blank", open tab
+        if (button.tagName === "A" && button.getAttribute("target") === "_blank") {
+          launchInTab(name);
+        } else {
+          setEmbeddedSimulation(name);
+        }
+      }
     });
   });
 })();
