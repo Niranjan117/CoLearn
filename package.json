@@ -1,0 +1,20 @@
+{
+  "name": "colearn-website",
+  "version": "1.0.0",
+  "description": "CoLearn Vocational Skills & NCCT Learning Platform",
+  "private": true,
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "build": "echo 'Static build ready'"
+  },
+  "keywords": [
+    "colearn",
+    "vocational",
+    "ncct",
+    "apprenticeships",
+    "simulations"
+  ],
+  "author": "CoLearn",
+  "license": "UNLICENSED"
+}
