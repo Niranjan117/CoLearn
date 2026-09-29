@@ -38,7 +38,16 @@
 }
 
 @media (max-width: 768px) {
+  .colearn-active-simulation .container,
+  .colearn-active-simulation .text {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .colearn-simulation-frame-wrap {
+    width: 100%;
+    max-width: 100%;
     min-height: 20rem;
   }
 

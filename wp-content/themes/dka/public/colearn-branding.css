@@ -93,3 +93,25 @@ body.colearn .banner .nav-primary > ul > li {
 body.colearn .banner .nav-primary > ul > li > a {
   white-space: nowrap;
 }
+
+body.courses #colearn-portal {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  body.colearn .case-study-builder .info-panel .text,
+  body.colearn .case-study-builder .info-panel .prose,
+  body.colearn .case-study-builder .info-panel .gform_wrapper,
+  body.colearn .case-study-builder .info-panel .gform_wrapper form,
+  body.colearn .case-study-builder .info-panel .gform_fields {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body.colearn .case-study-builder .info-panel textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+}
