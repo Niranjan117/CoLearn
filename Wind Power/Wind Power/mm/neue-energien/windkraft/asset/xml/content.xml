@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<content>
+    <start>
+        <headline><![CDATA[Wind Power – From Wind to Electricity]]></headline>
+        <paragraph1><![CDATA[A wind turbine converts the movement of air into electrical energy]]></paragraph1>
+        <button><![CDATA[TO SIMULATOR]]></button>
+    </start>
+    <fundamentals>
+        <headline><![CDATA[Wind Power]]></headline>
+        <paragraph1><![CDATA[The virtual wind turbine invites you to experiment. You can adjust various factors such as the height of the tower, the length and pitch of the rotor blades, and the wind speed. And now: let the wind blow! What power output will the turbine achieve, and how many households can be supplied with electricity? But beware: maximum utilization of every strong gust does not always lead to the desired success!]]></paragraph1>
+    </fundamentals>
+    <howto>
+        <desktop>
+            <headline><![CDATA[Instructions]]></headline>
+            <paragraph1><![CDATA[Use the mouse wheel to zoom in and out.]]></paragraph1>
+            <paragraph2><![CDATA[Click on all red markers to configure settings before you can start the simulation.]]></paragraph2>
+        </desktop>
+        <mobile>
+            <headline><![CDATA[Instructions]]></headline>
+            <paragraph1><![CDATA[Pinch two fingers together or spread them apart to zoom.]]></paragraph1>
+            <paragraph2><![CDATA[Swipe one finger left or right to rotate the camera.]]></paragraph2>
+            <paragraph3><![CDATA[Tap on all red markers to configure settings before you can start the simulation.]]></paragraph3>
+        </mobile>
+    </howto>
+    <layer>
+        <rotorsize>
+            <headline><![CDATA[Tower Height and Rotor Blade Length]]></headline>
+            <paragraph1><![CDATA[Using the slider, you can adjust the tower height of the wind turbine between 20 and 110 meters. The length of the rotor blades can also be adjusted using the slider: between 10 and 59 meters is possible.]]></paragraph1>
+            <slider>
+                <headline1><![CDATA[Tower height in meters]]></headline1>
+                <headline2><![CDATA[Rotor blade length in meters]]></headline2>
+            </slider>
+        </rotorsize>
+        <rotorspeed>
+            <headline><![CDATA[Wind Speeds and Rotor Blade Pitch]]></headline>
+            <accordion1>
+                <headline><![CDATA[Wind speed in m/s]]></headline>
+                <paragraph><![CDATA[The current wind speed determines the power produced by a wind turbine. In strong winds, a wind turbine can supply many households. If the wind is weak, very little electricity is generated. A true measure of long-term yield is not the momentary wind, but the average wind speed.]]></paragraph>
+            </accordion1>
+            <accordion2>
+                <headline><![CDATA[Rotor blade pitch in degrees]]></headline>
+                <paragraph><![CDATA[The pitch of the rotor blades relative to the wind determines how much wind energy is converted into rotational energy. In light winds, the blades are turned fully into the wind. To prevent damage to the turbine during strong wind speeds, the rotor blades are pitched out of the wind. In technical terminology, adjusting the blade angle is known as "pitching".]]></paragraph>
+            </accordion2>
+        </rotorspeed>
+        <end>
+            <headline><![CDATA[Turbine Destroyed]]></headline>
+            <paragraph1><![CDATA[The turbine has been destroyed and must be reset.]]></paragraph1>
+            <button><![CDATA[Reset Turbine]]></button>
+        </end>
+        <confirm><![CDATA[Confirm]]></confirm>
+        <close><![CDATA[Close]]></close>
+    </layer>
+    <nav>
+        <fundamentals><![CDATA[Fundamentals]]></fundamentals>
+        <reset><![CDATA[Reset]]></reset>
+        <howto><![CDATA[Instructions]]></howto>
+    </nav>
+    <simulation>
+        <info>
+            <windTooWeak><![CDATA[Wind is too weak.]]></windTooWeak>
+            <wrongRotorAngle><![CDATA[The rotor blades are turned out of the wind.]]></wrongRotorAngle>
+            <turbineRunning><![CDATA[The turbine is running at nominal capacity.]]></turbineRunning>
+            <windTooWeakOrWrongRotorAngle><![CDATA[The wind is too weak or the rotor blades are not properly aligned.]]></windTooWeakOrWrongRotorAngle>
+        </info>
+        <warning>
+            <turbineOverloading><![CDATA[The turbine is overloaded. You should turn the rotor blades slightly out of the wind to reduce power.]]></turbineOverloading>
+            <turbineOverloaded><![CDATA[The turbine is severely overloaded. You must pitch the rotor blades out of the wind to avoid damaging the generator.]]></turbineOverloaded>
+            <turbineDamaged><![CDATA[The turbine has been damaged.]]></turbineDamaged>
+            <imminentTurbineDestruction><![CDATA[The turbine is spinning too fast. You must turn the rotor blades out of the wind, otherwise the rotors will snap.]]></imminentTurbineDestruction>
+            <turbineDestroyed><![CDATA[The turbine has been destroyed.]]></turbineDestroyed>
+        </warning>
+    </simulation>
+</content>

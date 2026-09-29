@@ -1,0 +1,30 @@
+.brand {
+  min-width: 150px;
+  min-height: 71px;
+}
+
+.brand .colearn-brand-image[hidden] {
+  display: none !important;
+}
+
+.brand .colearn-wordmark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: 150px;
+  height: 71px;
+  align-items: center;
+  color: var(--black);
+  font-family: var(--roobert);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand .colearn-wordmark.logo-white {
+  color: #fff;
+}
+
+.colearn-wordmark[hidden] {
+  display: none !important;
+}

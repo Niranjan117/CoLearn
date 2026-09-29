@@ -1,0 +1,5 @@
+/* Fallback: only apply generic font family to non-icon elements */
+body,
+body *:not([class^="icon-"]):not([class*=" icon-"]) {
+    font-family: sans-serif;
+}

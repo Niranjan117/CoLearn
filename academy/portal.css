@@ -1,0 +1,457 @@
+.colearn-portal .colearn-welcome,
+.colearn-portal .colearn-section-heading,
+.colearn-portal .colearn-certificate-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.colearn-portal .colearn-welcome {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-learner-summary {
+  min-width: 15rem;
+}
+
+.colearn-portal .colearn-learner-summary p,
+.colearn-portal .colearn-stat-value,
+.colearn-portal .colearn-course-meta {
+  font-weight: 600;
+}
+
+.colearn-portal .colearn-portal-nav,
+.colearn-portal .colearn-course-filters,
+.colearn-portal .colearn-viewer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.colearn-portal .colearn-portal-nav {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-portal-nav a,
+.colearn-portal .colearn-section-heading a,
+.colearn-portal .colearn-assessment > a {
+  color: var(--black);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3rem;
+}
+
+.colearn-portal .colearn-overview,
+.colearn-portal .colearn-course-grid,
+.colearn-portal .colearn-learning-layout,
+.colearn-portal .colearn-profile-grid,
+.colearn-portal .colearn-career-list,
+.colearn-lectures .colearn-course-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.colearn-portal .colearn-overview {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-overview > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.colearn-portal .colearn-stat-value {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.colearn-portal .colearn-subsection {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--black);
+  scroll-margin-top: 6rem;
+}
+
+.colearn-portal .colearn-section-heading {
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.colearn-portal .colearn-section-heading h3 {
+  margin: 0;
+}
+
+.colearn-portal .colearn-section-heading label {
+  margin-left: auto;
+}
+
+.colearn-portal input[type="search"],
+.colearn-portal input[type="text"] {
+  min-height: 3rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+}
+
+.colearn-portal .colearn-course-filters {
+  margin-bottom: 1.5rem;
+}
+
+.colearn-portal .colearn-course-filters .button[aria-pressed="true"] {
+  background-color: var(--acid);
+  color: var(--black);
+}
+
+.colearn-portal .colearn-course-grid,
+.colearn-portal .colearn-career-list,
+.colearn-lectures .colearn-course-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.colearn-portal .colearn-course,
+.colearn-portal .colearn-career-list article,
+.colearn-lectures .colearn-course {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-course h4,
+.colearn-portal .colearn-career-list h4,
+.colearn-portal .colearn-lesson h4 {
+  margin: 0.4rem 0;
+}
+
+.colearn-portal .colearn-course-meta {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.colearn-portal .colearn-course-detail {
+  font-size: 1rem;
+}
+
+.colearn-portal .colearn-learning-layout {
+  grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+}
+
+.colearn-portal .colearn-module-list {
+  border-bottom: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-module {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 0;
+  border: 0;
+  border-top: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.colearn-portal .colearn-module.is-current {
+  background: var(--acid);
+}
+
+.colearn-portal .colearn-module span:last-child {
+  font-size: 0.875rem;
+}
+
+.colearn-portal .colearn-progress-track {
+  height: 0.5rem;
+  margin: 0 0 1.5rem;
+  background: var(--putty);
+}
+
+.colearn-portal .colearn-progress-track span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: var(--acid);
+  transition: width 0.3s var(--ease-quart);
+}
+
+.colearn-portal .colearn-video-wrap {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1rem;
+  background: var(--black);
+}
+
+.colearn-portal .colearn-video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.colearn-video-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.colearn-video-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease-quart);
+}
+
+.colearn-video-thumbnail:hover img {
+  transform: scale(1.03);
+}
+
+.colearn-play-button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--acid);
+  color: var(--black);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.colearn-portal .colearn-video-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--black);
+  text-align: center;
+}
+
+.colearn-portal .colearn-video-link a {
+  color: var(--acid);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.colearn-portal .colearn-lesson .button,
+.colearn-portal .colearn-course .button,
+.colearn-portal .colearn-career-list .button,
+.colearn-portal .colearn-profile-grid .button {
+  margin: 0.4rem 0.5rem 0.4rem 0;
+}
+
+.colearn-portal fieldset {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+}
+
+.colearn-portal fieldset legend {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.colearn-portal fieldset label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.colearn-portal input[type="radio"] {
+  margin-top: 0.45rem;
+  accent-color: var(--black);
+}
+
+.colearn-portal .colearn-factory-viewer {
+  position: relative;
+  height: min(54vw, 34rem);
+  min-height: 18rem;
+  overflow: hidden;
+  background: var(--black);
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.colearn-portal .colearn-factory-viewer:active {
+  cursor: grabbing;
+}
+
+.colearn-portal .colearn-factory-scene {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=2400&q=85");
+  background-position: var(--pan-x, 50%) 50%;
+  background-size: 300% 100%;
+  background-repeat: repeat-x;
+  transition: background-position 0.2s ease-out;
+}
+
+.colearn-portal .colearn-hotspot {
+  position: absolute;
+  display: block;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--acid);
+  background: var(--black);
+  color: var(--acid);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.colearn-portal .colearn-hotspot:nth-child(1) { top: 38%; left: 25%; }
+.colearn-portal .colearn-hotspot:nth-child(2) { top: 62%; left: 58%; }
+.colearn-portal .colearn-hotspot:nth-child(3) { top: 25%; left: 76%; }
+
+.colearn-portal .colearn-viewer-caption {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  left: 1rem;
+  margin: 0;
+  padding: 0.4rem 0.65rem;
+  background: var(--black);
+  color: var(--stone);
+  font-size: 0.9rem;
+}
+
+.colearn-portal .colearn-viewer-controls {
+  margin-top: 1rem;
+}
+
+.colearn-portal .colearn-profile-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.colearn-portal .colearn-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.colearn-portal .colearn-badges li {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-verify-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.colearn-portal .colearn-verify-form input {
+  flex: 1 1 16rem;
+}
+
+.colearn-portal .colearn-feedback {
+  min-height: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.colearn-portal .colearn-notifications {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.colearn-portal .colearn-notifications li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--black);
+}
+
+.colearn-portal .colearn-notifications button {
+  border: 0;
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  cursor: pointer;
+}
+
+.colearn-portal button:focus-visible,
+.colearn-portal a:focus-visible,
+.colearn-portal input:focus-visible,
+.colearn-portal .colearn-factory-viewer:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 3px;
+}
+
+.colearn-portal [hidden] {
+  display: none !important;
+}
+
+.colearn-portal .colearn-factory-viewer.is-cardboard .colearn-factory-scene::before,
+.colearn-portal .colearn-factory-viewer.is-cardboard .colearn-factory-scene::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  content: "";
+  background-image: inherit;
+  background-size: 600% 100%;
+}
+
+.colearn-portal .colearn-factory-viewer.is-cardboard .colearn-factory-scene::before {
+  left: 0;
+  background-position: 50% 50%;
+}
+
+.colearn-portal .colearn-factory-viewer.is-cardboard .colearn-factory-scene::after {
+  right: 0;
+  background-position: 52% 50%;
+}
+
+@media (max-width: 768px) {
+  .colearn-portal .colearn-welcome,
+  .colearn-portal .colearn-section-heading,
+  .colearn-portal .colearn-certificate-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .colearn-portal .colearn-learner-summary {
+    min-width: 0;
+  }
+
+  .colearn-portal .colearn-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .colearn-portal .colearn-course-grid,
+  .colearn-portal .colearn-career-list,
+  .colearn-portal .colearn-learning-layout,
+  .colearn-portal .colearn-profile-grid,
+  .colearn-lectures .colearn-course-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .colearn-portal .colearn-section-heading label {
+    margin-left: 0;
+  }
+
+  .colearn-portal #course-search {
+    width: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+    <start>
+        <headline><![CDATA[Solar Thermal - Heating with the Sun]]></headline>
+        <button><![CDATA[TO THE SIMULATOR]]></button>
+        <paragraph1><![CDATA[In a solar thermal system, sunlight heats water — for heating and as hot water]]></paragraph1>
+    </start>
+
+    <fundamentals>
+        <headline><![CDATA[Solar Thermal]]></headline>
+        <paragraph1><![CDATA[A solar thermal system uses both direct and diffuse solar radiation. The possible heat gain depends on the solar irradiance. The simulation assumes that the collectors are south-facing, optimally tilted, and unshaded. Because the times of hot water use do not coincide with the times of peak solar radiation, the thermal insulation of the storage tank and the entire system is very important. In addition, a boiler is connected to the storage tanks, which heats the water as needed.]]></paragraph1>
+    </fundamentals>
+
+    <howto>
+        <desktop>
+            <headline><![CDATA[Instructions]]></headline>
+            <paragraph1><![CDATA[Use the mouse wheel to zoom.]]></paragraph1>
+            <paragraph2><![CDATA[First click on all red markers to configure settings before you can start the simulation.]]></paragraph2>
+        </desktop>
+        <mobile>
+            <headline><![CDATA[Instructions]]></headline>
+            <paragraph1><![CDATA[Spread or pinch two fingers to zoom.]]></paragraph1>
+            <paragraph2><![CDATA[Move one finger left or right to rotate the camera.]]></paragraph2>
+            <paragraph3><![CDATA[First click on all red markers to configure settings before you can start the simulation.]]></paragraph3>
+        </mobile>
+    </howto>
+
+    <layer>
+        <season>
+            <headline><![CDATA[Season]]></headline>
+            <paragraph1><![CDATA[The Earth orbits the Sun once per year. The Earth's axis is tilted by 23° relative to the plane of its orbit around the Sun. This tilt is responsible for the creation of the seasons. For geometric reasons, the solar irradiance changes depending on the season. The change is particularly pronounced at high latitudes.]]></paragraph1>
+        </season>
+        <heating>
+            <headline><![CDATA[Info - Heat Storage]]></headline>
+            <paragraph1><![CDATA[The heat delivered during the day from the collectors is used to heat a large, well-insulated water tank. The heat stored in it is then available in the evening or on days with bad weather.]]></paragraph1>
+        </heating>
+        <tank>
+            <headline><![CDATA[Info - Boiler]]></headline>
+            <paragraph1><![CDATA[A conventional heating system that keeps the house warm in the evenings or in cold weather when the heat from the collectors and the heat storage is insufficient.]]></paragraph1>
+        </tank>
+        <panels>
+            <headline><![CDATA[Collector Area]]></headline>
+            <paragraph1><![CDATA[In the simulation, collector areas between 1 and 15 square metres can be set using a slider.]]></paragraph1>
+        </panels>
+        <type>
+            <headline><![CDATA[Collector Type]]></headline>
+            <paragraph1><![CDATA[The energy yield depends directly on the radiation captured in the collectors. A portion of it is re-radiated or lost through heat losses. Therefore, the insulation of the collector is extremely important.]]></paragraph1>
+            <accordion1>
+                <headline><![CDATA[Flat-plate Collector]]></headline>
+                <paragraph1><![CDATA[The most commonly used collector type is the flat-plate collector. Essentially, it is a flat box shielded by a glass plate. Inside it contains the absorber surface with integrated heat exchanger tubes.]]></paragraph1>
+            </accordion1>
+            <accordion2>
+                <headline><![CDATA[Evacuated Tube Collector]]></headline>
+                <paragraph1><![CDATA[An evacuated tube collector consists of several tubes containing absorbers and heat carrier tubes. The vacuum in the tubes prevents heat transfer and is therefore an excellent insulator. Evacuated tube collectors have a higher efficiency than flat-plate collectors, but are also significantly more expensive.]]></paragraph1>
+            </accordion2>
+        </type>
+        <location>
+            <headline><![CDATA[Location]]></headline>
+            <paragraph1><![CDATA[Seven different cities with varying latitudes are available: Hamburg, Frankfurt, Freiburg, Geneva, Madrid, Rome, and Athens. Whether a solar thermal system is worthwhile depends on the climatic conditions at a given location. The latitude largely determines the amount of solar irradiance and thus the possible hot water yield.]]></paragraph1>
+        </location>
+        <weather>
+            <headline><![CDATA[Weather]]></headline>
+            <paragraph1><![CDATA[In addition to location and season, current weather has the most decisive influence on the momentary hot water yield. Three different weather situations are available for each location: sunny, cloudy, and overcast. Whether a solar thermal system is worthwhile is determined by the average weather.]]></paragraph1>
+        </weather>
+        <confirm><![CDATA[Confirm]]></confirm>
+        <close><![CDATA[Close]]></close>
+    </layer>
+
+    <nav>
+        <fundamentals><![CDATA[Basics]]></fundamentals>
+        <reset><![CDATA[Reset]]></reset>
+        <howto><![CDATA[Instructions]]></howto>
+    </nav>
+
+    <simulator>
+        <button><![CDATA[START SIMULATION]]></button>
+        <daily><![CDATA[Daily Hot Water Requirement]]></daily>
+        <energy><![CDATA[System Energy Yield]]></energy>
+        <water><![CDATA[Amount of Water Heated to 45°]]></water>
+        <shower><![CDATA[Shower Time]]></shower>
+        <bathtub><![CDATA[Bathtubs Filled]]></bathtub>
+        <location><![CDATA[Location:]]></location>
+        <latitude><![CDATA[Latitude:]]></latitude>
+        <season><![CDATA[Season:]]></season>
+        <weather><![CDATA[Weather:]]></weather>
+    </simulator>
+</content>
