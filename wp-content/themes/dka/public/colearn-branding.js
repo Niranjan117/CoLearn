@@ -17,6 +17,8 @@
   document.querySelectorAll("a.brand").forEach((brand) => {
     brand.href = "/";
     brand.setAttribute("aria-label", "CoLearn home");
+    if (brand.querySelector(".colearn-wordmark")) return;
+
     const logoImages = [...brand.querySelectorAll("img")];
     logoImages.forEach((image) => {
       image.alt = "CoLearn";
@@ -45,14 +47,20 @@
 
   const labelMap = new Map([
     ["Work", "Careers"],
-    ["Expertise", "Learning paths"],
-    ["Academy", "NCCT learning"],
-    ["Insights", "Learning resources"],
-    ["Contact", "Learner support"],
-    ["Services", "Courses & skills"],
-    ["Culture", "Skills pathways"],
+    ["Expertise", "Courses"],
+    ["Academy", "Academy"],
+    ["Insights", "Videos"],
+    ["Contact", "Support"],
+    ["Services", "Courses"],
+    ["Culture", "Paths"],
     ["Coaching", "Simulations"],
-    ["Talks", "Video lectures"],
+    ["Talks", "Lectures"],
+    ["Learning paths", "Courses"],
+    ["Learning resources", "Videos"],
+    ["Learner support", "Support"],
+    ["NCCT learning", "Academy"],
+    ["Video lectures", "Videos"],
+    ["My learning", "Learn"],
   ]);
 
   document.querySelectorAll(".nav-primary a, .mobile-menu a").forEach((link) => {
@@ -73,9 +81,11 @@
 
     const originalPath = url.pathname;
     if (originalPath.startsWith("/work/")) {
-      link.href = "/academy/courses/#careers";
+      link.href = "/academy/learner/#careers";
     } else if (originalPath.startsWith("/insights/")) {
       link.href = "/academy/lectures/";
+    } else if (originalPath.startsWith("/contact/")) {
+      link.href = "/contact/";
     } else if (originalPath.startsWith("/services/") || originalPath.startsWith("/expertise/")) {
       link.href = "/academy/courses/#discover";
     } else if (originalPath.startsWith("/academy/culture/")) {
@@ -86,6 +96,8 @@
       link.href = "/academy/lectures/";
     } else if (originalPath.startsWith("/academy/courses/")) {
       link.href = "/academy/courses/";
+    } else if (originalPath.startsWith("/academy/")) {
+      link.href = "/academy/";
     } else {
       link.href = `${originalPath}${url.search}${url.hash}`;
     }

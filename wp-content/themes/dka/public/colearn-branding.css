@@ -1,5 +1,29 @@
+@font-face {
+  font-family: Roobert;
+  src: url("./subset-Roobert-Medium-ab9db677.woff2?v=20260930c") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roobert;
+  src: url("./subset-Roobert-SemiBold-fe346532.woff2?v=20260930c") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roobert;
+  src: url("./subset-Roobert-Bold-36dca5ce.woff2?v=20260930c") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .brand {
-  min-width: 150px;
+  min-width: 0;
   min-height: 71px;
 }
 
@@ -52,4 +76,20 @@
 
 .colearn-wordmark[hidden] {
   display: none !important;
+}
+
+body.colearn .banner .container,
+body.colearn .banner .nav-primary,
+body.colearn .banner .brand,
+body.colearn .banner .academy-link {
+  min-width: 0;
+}
+
+body.colearn .banner .nav-primary > ul > li {
+  padding-right: clamp(0.25rem, 0.8vw, 0.75rem);
+  padding-left: clamp(0.25rem, 0.8vw, 0.75rem);
+}
+
+body.colearn .banner .nav-primary > ul > li > a {
+  white-space: nowrap;
 }
