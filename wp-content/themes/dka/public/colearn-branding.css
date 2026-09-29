@@ -94,8 +94,41 @@ body.colearn .banner .nav-primary > ul > li > a {
   white-space: nowrap;
 }
 
+body.academy .hero-with-outline h1 {
+  color: var(--black);
+}
+
 body.courses #colearn-portal {
   display: none !important;
+}
+
+body.career-directory .career-search {
+  width: min(100%, 30rem);
+  min-height: 3rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background: transparent;
+  color: var(--black);
+  font: inherit;
+}
+
+body.career-directory .career-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+body.career-directory .career-filter[aria-pressed="true"] {
+  background: var(--acid);
+  color: var(--black);
+}
+
+body.career-directory .career-empty {
+  grid-column: 1 / -1;
+  padding: 2rem 0;
+  border-top: 1px solid var(--black);
 }
 
 @media (max-width: 768px) {
