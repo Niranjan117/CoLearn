@@ -7,6 +7,9 @@ NCCT-focused learning platform for course discovery, structured learning, skills
 ```
 ├── index.html          # Main landing page
 ├── academy/            # NCCT course catalogue and learner hub
+│   ├── learner/        # Learner profile, progress, assessments and credentials
+│   ├── simulations/    # Dam, solar thermal and wind power learning activities
+│   └── lectures/       # Thumbnail-led YouTube lectures and resources
 ├── contact/            # Learner support
 ├── insights/           # Learning resources
 ├── work/               # Career pathways

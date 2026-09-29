@@ -22,7 +22,32 @@
 }
 
 .brand .colearn-wordmark.logo-white {
+  display: none;
   color: #fff;
+}
+
+.single-insight .brand .colearn-wordmark.logo-default,
+.page-template-template-sector .brand .colearn-wordmark.logo-default,
+.single-case-study .brand .colearn-wordmark.logo-default {
+  display: none;
+}
+
+.single-insight .brand .colearn-wordmark.logo-white,
+.page-template-template-sector .brand .colearn-wordmark.logo-white,
+.single-case-study .brand .colearn-wordmark.logo-white {
+  display: flex;
+}
+
+.single-insight header.banner.condensed .brand .colearn-wordmark.logo-white,
+.page-template-template-sector header.banner.condensed .brand .colearn-wordmark.logo-white,
+.single-case-study header.banner.condensed .brand .colearn-wordmark.logo-white {
+  display: none;
+}
+
+.single-insight header.banner.condensed .brand .colearn-wordmark.logo-default,
+.page-template-template-sector header.banner.condensed .brand .colearn-wordmark.logo-default,
+.single-case-study header.banner.condensed .brand .colearn-wordmark.logo-default {
+  display: flex;
 }
 
 .colearn-wordmark[hidden] {
