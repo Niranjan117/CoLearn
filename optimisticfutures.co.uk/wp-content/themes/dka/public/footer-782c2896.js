@@ -1,0 +1,2 @@
+import{g as t,S as g}from"./main-a8b798b6.js";t.registerPlugin(g);function s(e){const o=e.querySelector(".footer-inner");let r=null,i=t.matchMedia();function n(){i.add("(min-width: 850px)",()=>{r=t.fromTo(o,{yPercent:"-25"},{yPercent:0,ease:"none",scrollTrigger:{trigger:e,start:"top bottom",end:"bottom bottom",scrub:!0}})})}function l(){r&&r.scrollTrigger&&(r.scrollTrigger.kill(),r=null),t.set(o,{clearProps:"all"}),i.revert()}return{init:n,destroy:l}}export{s as footer};
+//# sourceMappingURL=footer-782c2896.js.map

@@ -1,0 +1,2 @@
+import{g as n,S as r}from"./main-a8b798b6.js";n.registerPlugin(r);function s(){let t=[],o=n.matchMedia();const i=document.querySelectorAll('[data-module="fade-in"]'),a=()=>{i.length&&(t=r.batch(i,{start:"top+=100px bottom",onEnter:e=>n.to(e,{opacity:1,duration:.6,ease:"none",stagger:.05})}))};function l(){o.add("(min-width: 769px)",()=>{a()})}function c(){t.forEach(e=>e.kill()),t=[],o.revert()}return{init:l,destroy:c}}export{s as fadeIn};
+//# sourceMappingURL=fade-in-ce51fd1a.js.map

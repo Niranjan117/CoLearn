@@ -1,0 +1,2 @@
+function s(i){let e=null;return{init:()=>{e=new IntersectionObserver(t=>{t.forEach(n=>{n.target.querySelectorAll(".inner").forEach(l=>{const r=l;n.isIntersecting?r.style.animationPlayState="running":r.style.animationPlayState="paused"})})}),e.observe(i)},destroy:()=>{e&&(e.disconnect(),e=null),i.querySelectorAll(".inner").forEach(t=>{const n=t;n.style.animationPlayState="initial"})}}}export{s as marqueeAnimation};
+//# sourceMappingURL=marquee-6b6285ad.js.map
