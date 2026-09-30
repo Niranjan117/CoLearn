@@ -2,15 +2,15 @@
   const simulations = {
     dam: {
       title: "Hydroelectric power plant",
-      source: "/Dam/Dam%20Simulation/mm/neue-energien/wasserkraft/index.html",
+      source: "/Dam/Dam%20Simulation/mm/neue-energien/wasserkraft/",
     },
     solar: {
       title: "Solar thermal circulation",
-      source: "/Solar/Solar%20Panel/mm/neue-energien/solarthermie/index.html",
+      source: "/Solar/Solar%20Panel/mm/neue-energien/solarthermie/",
     },
     wind: {
       title: "Wind power generation",
-      source: "/Wind%20Power/Wind%20Power/mm/neue-energien/windkraft/index.html",
+      source: "/Wind%20Power/Wind%20Power/mm/neue-energien/windkraft/",
     },
   };
 

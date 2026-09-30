@@ -42,12 +42,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/global_assets/:match*",
-      "destination": "/Dam/Dam%20Simulation/global_assets/:match*"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
