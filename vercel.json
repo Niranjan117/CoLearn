@@ -42,7 +42,6 @@
       "permanent": true
     }
   ],
-  ],
   "headers": [
     {
       "source": "/(.*)",
