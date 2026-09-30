@@ -45,16 +45,24 @@ const CACHE_DURATION = {
 };
 
 const server = http.createServer((req, res) => {
-  let urlPath = req.url.split('?')[0];
+  let urlPath;
+  try {
+    urlPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  } catch {
+    res.writeHead(400); res.end('Invalid URL'); return;
+  }
+  if (urlPath.startsWith('/global_assets/')) {
+    urlPath = `/Dam/Dam Simulation${urlPath}`;
+  }
   if (urlPath.endsWith('/')) urlPath += 'index.html';
-  
-  const filePath = path.join(ROOT, urlPath);
+
+  const filePath = path.resolve(ROOT, `.${urlPath}`);
   const ext = path.extname(filePath).toLowerCase();
   const mime = MIME[ext] || 'application/octet-stream';
   const cacheSecs = CACHE_DURATION[ext] || 0;
 
   // Security: don't serve outside ROOT
-  if (!filePath.startsWith(ROOT)) {
+  if (filePath !== ROOT && !filePath.startsWith(`${ROOT}${path.sep}`)) {
     res.writeHead(403); res.end('Forbidden'); return;
   }
 

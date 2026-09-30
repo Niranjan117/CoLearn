@@ -1,4 +1,21 @@
+# Dependency & local environments
 node_modules/
+.env
+.env.local
+*.log
+
+# Operating System & IDE
 .DS_Store
 Thumbs.db
-*.log
+Desktop.ini
+.vscode/
+.idea/
+
+# Vercel deployment artifacts
+.vercel/
+
+# Temporary scratch scripts & media caches
+scratch/
+.system_generated/
+.tempmediaStorage/
+.user_uploaded/

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 265" width="200" height="265">
+  <!-- Simplified Europe map for solar panel location selector -->
+  <rect width="200" height="265" fill="#E8F4F8" rx="4"/>
+  <!-- Simplified European landmass shape -->
+  <path d="M 60 10 L 80 8 L 95 12 L 105 10 L 120 14 L 135 10 L 150 16 L 160 12 L 170 18 L 175 26 L 165 32 L 170 40 L 160 48 L 162 56 L 155 62 L 158 70 L 150 78 L 148 88 L 140 92 L 138 100 L 145 108 L 140 116 L 132 120 L 128 130 L 120 138 L 115 148 L 118 158 L 110 165 L 102 170 L 95 178 L 90 186 L 85 192 L 80 185 L 78 175 L 72 170 L 70 162 L 62 156 L 58 148 L 54 140 L 48 132 L 42 125 L 38 116 L 40 108 L 35 100 L 30 92 L 28 82 L 32 72 L 28 62 L 30 52 L 36 44 L 34 36 L 40 28 L 48 22 L 55 16 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1.5"/>
+  <!-- Scandinavian peninsula -->
+  <path d="M 80 8 L 88 2 L 96 4 L 100 10 L 104 6 L 110 8 L 108 16 L 100 18 L 95 12 L 88 14 L 80 12 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1"/>
+  <!-- Baltic details -->
+  <path d="M 120 14 L 130 10 L 140 12 L 148 18 L 145 24 L 135 22 L 125 20 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1"/>
+  <!-- Iberian peninsula -->
+  <path d="M 48 132 L 42 125 L 35 128 L 28 136 L 25 148 L 28 158 L 36 165 L 45 162 L 52 155 L 56 148 L 54 140 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1"/>
+  <!-- Italian peninsula -->
+  <path d="M 115 148 L 118 158 L 120 170 L 118 182 L 112 190 L 108 182 L 110 170 L 110 165 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1"/>
+  <!-- Greek area -->
+  <path d="M 140 192 L 148 185 L 155 178 L 160 185 L 156 195 L 148 200 L 140 196 Z" fill="#C8DDE8" stroke="#90B4C4" stroke-width="1"/>
+  <!-- Water bodies (Mediterranean sea cutouts implied by lighter background) -->
+  <ellipse cx="100" cy="210" rx="50" ry="10" fill="#E8F4F8" opacity="0.5"/>
+</svg>

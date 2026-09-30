@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+<font id="swr-energy" horiz-adv-x="1024">
+<font-face font-family="swr-energy" units-per-em="1024" ascent="960" descent="-64"/>
+<missing-glyph horiz-adv-x="512"/>
+<!-- icon-arrow-v e900: up-down arrow -->
+<glyph glyph-name="icon-arrow-v" unicode="&#xe900;" horiz-adv-x="1024"
+  d="M512 832 L256 512 L384 512 L384 192 L640 192 L640 512 L768 512 Z M512 128 L768 448 L640 448 L640 768 L384 768 L384 448 L256 448 Z" />
+<!-- icon-check-mark e901: checkmark -->
+<glyph glyph-name="icon-check-mark" unicode="&#xe901;" horiz-adv-x="1024"
+  d="M160 448 L352 640 L480 512 L800 832 L896 736 L480 320 Z" />
+<!-- icon-drop e902: water drop -->
+<glyph glyph-name="icon-drop" unicode="&#xe902;" horiz-adv-x="1024"
+  d="M512 896 Q512 896 256 576 Q128 416 128 320 Q128 128 512 128 Q896 128 896 320 Q896 416 768 576 Q512 896 512 896 Z" />
+<!-- icon-exclamation-mark e903: exclamation -->
+<glyph glyph-name="icon-exclamation-mark" unicode="&#xe903;" horiz-adv-x="1024"
+  d="M448 832 L576 832 L544 384 L480 384 Z M448 256 L448 128 L576 128 L576 256 Z" />
+<!-- icon-flash e904: lightning bolt -->
+<glyph glyph-name="icon-flash" unicode="&#xe904;" horiz-adv-x="1024"
+  d="M600 896 L256 512 L480 512 L424 128 L768 512 L544 512 Z" />
+<!-- icon-info e905: info circle -->
+<glyph glyph-name="icon-info" unicode="&#xe905;" horiz-adv-x="1024"
+  d="M512 896 Q256 896 128 768 Q0 640 0 384 Q0 128 128 0 Q256 -128 512 -128 Q768 -128 896 0 Q1024 128 1024 384 Q1024 640 896 768 Q768 896 512 896 Z M448 640 L448 512 L576 512 L576 640 Z M448 448 L448 128 L576 128 L576 448 Z" />
+<!-- icon-question-mark e906: question mark -->
+<glyph glyph-name="icon-question-mark" unicode="&#xe906;" horiz-adv-x="1024"
+  d="M512 896 Q256 896 128 768 Q0 640 0 384 Q0 128 128 0 Q256 -128 512 -128 Q768 -128 896 0 Q1024 128 1024 384 Q1024 640 896 768 Q768 896 512 896 Z M384 640 Q384 768 512 768 Q640 768 640 640 Q640 576 576 512 L512 448 L512 320 L512 320 L448 320 L448 448 L512 512 Q576 576 576 640 Q576 704 512 704 Q448 704 448 640 Z M448 256 L448 128 L576 128 L576 256 Z" />
+<!-- icon-refresh e907: refresh arrows -->
+<glyph glyph-name="icon-refresh" unicode="&#xe907;" horiz-adv-x="1024"
+  d="M512 896 Q320 896 192 768 Q128 704 96 624 L224 624 Q256 672 320 704 Q384 736 512 736 Q640 736 736 640 Q832 544 832 384 Q832 224 736 128 Q640 32 512 32 Q384 32 288 128 Q224 192 192 288 L352 288 L192 512 L32 288 L192 288 Q224 160 320 80 Q416 0 512 0 Q704 0 832 128 Q960 256 960 384 Q960 512 832 640 Q704 768 512 768 Z" />
+<!-- icon-sound-off e908: speaker muted -->
+<glyph glyph-name="icon-sound-off" unicode="&#xe908;" horiz-adv-x="1024"
+  d="M192 576 L192 192 L384 192 L640 0 L640 768 L384 576 Z M896 576 L768 448 L896 320 L832 256 L704 384 L576 256 L512 320 L640 448 L512 576 L576 640 L704 512 L832 640 Z" />
+<!-- icon-sound-on e909: speaker with waves -->
+<glyph glyph-name="icon-sound-on" unicode="&#xe909;" horiz-adv-x="1024"
+  d="M192 576 L192 192 L384 192 L640 0 L640 768 L384 576 Z M736 640 Q800 576 800 384 Q800 192 736 128 L800 64 Q896 160 896 384 Q896 608 800 704 Z M832 736 Q960 640 960 384 Q960 128 832 32 L896 -32 Q1024 96 1024 384 Q1024 672 896 768 Z" />
+<!-- icon-x e90a: close X -->
+<glyph glyph-name="icon-x" unicode="&#xe90a;" horiz-adv-x="1024"
+  d="M832 832 L576 576 L832 320 L768 256 L512 512 L256 256 L192 320 L448 576 L192 832 L256 896 L512 640 L768 896 Z" />
+</font>
+</defs>
+</svg>

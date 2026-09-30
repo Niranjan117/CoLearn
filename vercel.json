@@ -1,0 +1,110 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/services",
+      "destination": "/academy/courses/",
+      "permanent": true
+    },
+    {
+      "source": "/services/:match*",
+      "destination": "/academy/courses/",
+      "permanent": true
+    },
+    {
+      "source": "/expertise",
+      "destination": "/academy/courses/",
+      "permanent": true
+    },
+    {
+      "source": "/expertise/:match*",
+      "destination": "/academy/courses/",
+      "permanent": true
+    },
+    {
+      "source": "/academy/culture/:match*",
+      "destination": "/academy/courses/",
+      "permanent": true
+    },
+    {
+      "source": "/academy/coaching/:match*",
+      "destination": "/academy/simulations/",
+      "permanent": true
+    },
+    {
+      "source": "/academy/talks/:match*",
+      "destination": "/academy/lectures/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/global_assets/:match*",
+      "destination": "/Dam/Dam%20Simulation/global_assets/:match*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(woff|woff2|ttf|eot)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/wp-content/themes/dka/public/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|webp|svg|gif|ico|avif)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(mp4|webm|mp3)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ]
+}

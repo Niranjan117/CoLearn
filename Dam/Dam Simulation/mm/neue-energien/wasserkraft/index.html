@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <title>Dam Simulation: Energy through Hydroelectric Power Plant</title>
+
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="description"
+        content="The water flow is converted into electrical energy in a hydroelectric power plant | Take a look at our simulation." />
+
+    <meta property="og:title" content="Dam Simulation: Energy through Hydroelectric Power Plant" />
+    <meta property="og:description"
+        content="The water flow is converted into electrical energy in a hydroelectric power plant | Take a look at our simulation." />
+    <meta property="og:image" content="asset/images/og-image-wasserkraft.jpg" width="1200" height="630" />
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="asset/css/application.css" media="all" rel="stylesheet" type="text/css" rev="stylesheet" />
+    <style>
+        footer {
+            display: none !important;
+        }
+        .main-container,
+        .start-layer {
+            height: 100% !important;
+            height: 100vh !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container" data-cmp="page-manager" data-entry-page="app-page"></div>
+
+    <div class="bg-darkener-start"></div>
+    <div class="webgl-not-supported">
+        <div class="layer-animation-wrapper">
+            <div class="layer-fade top"></div>
+            <div class="layer-wrapper">
+                <div class="layer-container">
+                    <div class="headline-wrapper grid-item">
+                        <h3>WebGL is not supported on this device.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-fade bottom"></div>
+        </div>
+    </div>
+
+    <div class="imprint" data-cmp="imprint-layer">
+        <div class="layer-animation-wrapper">
+            <div class="layer-fade top">
+                <div class="button-close-wrapper">
+                    <button class="button-close">
+                        <span class="icon icon-x"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="layer-wrapper imprint">
+                <div class="layer-container">
+                    <div class="headline-wrapper grid-item">
+                        <h2>Contributors "Hydroelectric Power - Electricity from Flow"</h2>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Netzbewegung GmbH, Peter Bernstein (SWR)</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Editors:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Peter Bernstein (SWR)</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Technical Advice:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Kristof Köhler (SWR)</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Graphics and Programming:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Netzbewegung GmbH</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Sound Design:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Netzbewegung GmbH</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Project Management:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>Monika Buscher (SWR)</p>
+                    </div>
+
+                    <div class="headline-wrapper grid-item">
+                        <h3>Copyright:</h3>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <p>&copy; Südwestrundfunk 2020<br />
+                            Anstalt des öffentlichen Rechts<br />
+                            Neckarstraße 230<br />
+                            70190 Stuttgart
+                            <br /><br />
+                            Telefon: 0711/929-0<br />
+                            E-Mail: <a href="#">info@swr.de</a>
+                            <br /><br />
+                            Umsatzsteuer-Identifikationsnummer: DE 812481116<br />
+                            Gesetzlicher Vertreter: Kai Gniffke (Intendant)
+                        </p>
+
+                        <p>Head of Dam Simulation: Monika Buscher<br />
+                            <a href="#">Dam Simulation</a>
+                        </p>
+
+                        <p>"Hydroelectric Power - Electricity from Flow" was created in cooperation with the Ministries
+                            of Education of the states of Baden-Württemberg, Rhineland-Palatinate and Saarland.</p>
+                    </div>
+                    <div class="paragraph-wrapper grid-item">
+                        <div class="image-container">
+                            <img class="bawue" src="asset/images/logos/logo-bw.jpg"
+                                alt="Ministry of Education Baden-Württemberg">
+                            <img class="pfalz" src="asset/images/logos/logo-pfalz.jpg"
+                                alt="Ministry of Education Rhineland-Palatinate">
+                            <img class="saarl" src="asset/images/logos/logo-saarland.jpg"
+                                alt="Ministry of Education Saarland">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer-fade bottom"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <a id="imprint" class="footer-item">Contributors</a>
+                <a id="privacy" class="footer-item" href="#">Privacy</a>
+                <a id="imprint-new" class="footer-item" href="#">Imprint</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tracking call -->
+    <script src="/global_assets/trk/util.js"></script>
+    <script>xtsd = "https:\/\/logs1241"; xtsite = "487212"; xtn2 = "53"; xtpage = "mm::neue-energien::wasserkraft::mme"; xtdi = ""; xt_multc = "&x1=DESWR%2FBAD_WEB_WIBI_PS%2F%2Fmm%2Fneue-energien%2Fwasserkraft%2Fmme&x2=Artikel&x3=%2Fmm%2Fneue-energien%2Fwasserkraft%2Fmme&x5=SWR.de&x6=nein&x7=nein&x8=planet-schule&x9="; xt_an = ""; xt_ac = ""; if (window.xtparam != null) { window.xtparam += "&ac=" + xt_ac + "&an=" + xt_an + xt_multc; } else { window.xtparam = "&ac=" + xt_ac + "&an=" + xt_an + xt_multc; };</script>
+    <script src="/global_assets/trk/xtcore.js"></script>
+    <noscript>
+        <img width="1" height="1" style="position:fixed;top:0px;left:0px;visibility:hidden;" alt=""
+            src="https://logs1241.xiti.com/hit.xiti?x1=DESWR%2FBAD_WEB_WIBI_PS%2F%2Fmm%2Fneue-energien%2Fwasserkraft%2Fmme&amp;x2=Artikel&amp;x3=%2Fmm%2Fneue-energien%2Fwasserkraft%2Fmme&amp;x5=SWR.de&amp;x6=nein&amp;x7=nein&amp;x8=planet-schule&amp;x9=&amp;s=487212&amp;s2=53&amp;p=mm%3A%3Aneue-energien%3A%3Awasserkraft%3A%3Amme&amp;di=">
+    </noscript>
+    <script src="/global_assets/trk/app.js"></script>
+    <script>planet_schule_de.webtrack.config({ "ATI_basepath": "\/mm\/neue-energien\/wasserkraft\/mme", "ATI_subsite": "53" });</script>
+
+    <script src="asset/javascript/node_modules/systemjs/dist/system.min.js"></script>
+    <script src="asset/javascript/app.min.js?1777969491"></script>
+</body>
